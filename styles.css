@@ -71,19 +71,19 @@ body {
   color: white;
 }
 
-/* Video Gallery and Thumbnails */
-.category-section {
-  margin-top: 80px;
-  padding: 20px;
-}
-
-/* Center category titles */
+/* Center the Category Titles */
 .category-title {
   text-align: center;
   color: #ffca28;
   font-size: 36px; /* Increased font size for category headers */
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+/* Video Gallery and Thumbnails */
+.category-section {
+  margin-top: 80px;
+  padding: 20px;
 }
 
 /* Video Gallery Grid */
@@ -206,7 +206,6 @@ body {
     font-size: 14px;
   }
 }
-
 
 
 
