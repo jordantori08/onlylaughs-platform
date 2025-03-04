@@ -1,208 +1,90 @@
-/* Global Body and Layout */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #121212; /* Dark background for contrast */
-  color: white;
-  transition: padding-top 0.3s ease-in-out; /* Smooth transition for body */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
 }
 
-/* Navbar (Fixed Top) */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999; /* Keep the navbar on top */
-  transition: top 0.3s ease; /* Smooth transition for navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 30px;
 }
 
-.navbar-logo img {
-  width: 120px;
-  cursor: pointer;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-.navbar-links {
-  display: flex;
-  justify-content: space-between;
-  width: 60%; /* Adjust the width of navbar items */
+.nav-links li {
+    margin: 0 15px;
 }
 
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  text-transform: uppercase;
-  margin: 0 15px;
-  font-weight: bold; /* Bold text for links */
-  transition: color 0.3s ease-in-out;
-}
-
-/* Navbar Links Hover Effect */
-.navbar-links a:hover {
-  color: #ffca28; /* Golden yellow on hover */
-}
-
-/* Full Screen Header with Background Image */
-.main-header {
-  width: 100%;
-  height: 80vh;
-  background-image: url('your-background-image.jpg'); /* Replace with your background image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.header-content h1 {
-  font-size: 60px; /* Increased font size for the header */
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-top: 20px;
-  color: white;
-}
-
-/* Video Gallery and Thumbnails */
-.category-section {
-  margin-top: 80px;
-  padding: 20px;
-}
-
-.category-section h2 {
-  color: #ffca28;
-  font-size: 36px; /* Increased font size for category headers */
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* Video Gallery Grid */
-.video-gallery {
-  display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  gap: 15px;
-  padding-bottom: 20px; /* Add padding to the bottom for better scrolling */
-}
-
-.video-item {
-  width: 180px; /* Reduced width for smaller thumbnails */
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-}
-
-.video-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Play Icon Styling (Visible on hover) */
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  color: white;
-  display: none; /* Hidden by default */
-  z-index: 10;
-}
-
-/* Show Play Icon when Hovering */
-.video-item:hover .play-icon {
-  display: block;
-  cursor: pointer;
-}
-
-/* Video Item Hover Effect */
-.video-item:hover .thumbnail {
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.video-item:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Box shadow on hover */
-}
-
-.video-item p {
-  padding: 10px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.video-item a {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ffca28;
-  color: black;
-  padding: 8px 20px;
-  font-size: 14px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.video-item a:hover {
-  background-color: #ff5722; /* Red color on hover */
-}
-
-/* Responsive Layout for Smaller Screens */
-@media (max-width: 768px) {
-  .navbar-links {
-    width: 50%; /* Adjust the width of navbar items */
-  }
-
-  .video-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium-sized screens */
-    gap: 15px;
-  }
-
-  .navbar {
-    padding: 10px 15px;
-  }
-
-  .navbar a {
+.nav-links a {
+    color: white;
+    text-decoration: none;
     font-size: 16px;
-    margin: 0 10px;
-  }
-
-  .header-logo {
-    max-width: 150px; /* Resize logo on smaller screens */
-  }
 }
 
-@media (max-width: 480px) {
-  .navbar-links {
-    width: 100%; /* Stack navbar items vertically */
-    justify-content: space-evenly;
-  }
+.login-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
-  .video-gallery {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 item per row on very small screens */
-    gap: 10px;
-  }
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+}
 
-  .navbar {
-    flex-direction: column; /* Stack the navbar links vertically */
+.subscribe-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.comedians, .live-shows {
+    padding: 50px;
+    text-align: center;
+}
+
+.comedians-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.comedian-card {
+    background: black;
     padding: 20px;
-  }
+    border-radius: 8px;
+}
 
-  .navbar a {
-    font-size: 14px;
-  }
+.show-card {
+    display: flex;
+    align-items: center;
+    background: black;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.watch-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 
