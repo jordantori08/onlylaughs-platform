@@ -9,7 +9,10 @@
 <body>
   <!-- Top Navigation Bar -->
   <div class="navbar">
-    <img src="your-logo.png" alt="Only Laughs Logo" class="navbar-logo">
+    <!-- Logo as clickable link -->
+    <a href="index.html">
+      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="navbar-logo">
+    </a>
     <a href="#">Home</a>
     <a href="#">TV Shows</a>
     <a href="#">Movies</a>
@@ -19,7 +22,7 @@
   <!-- Main Header with Background Image -->
   <header class="main-header">
     <div class="header-content">
-      <img src="your-logo.png" alt="Only Laughs Logo" class="header-logo">
+      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="header-logo">
       <h1>Only Laughs</h1>
     </div>
   </header>
@@ -29,7 +32,11 @@
     <h2>Old School</h2>
     <div class="video-gallery">
       <div class="video-item">
-        <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
+        <div class="thumbnail-wrapper">
+          <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
+          <!-- Play Icon Overlay -->
+          <div class="play-icon">&#9654;</div>
+        </div>
         <p>Comic 1 - Legendary Stand-Up</p>
         <a href="landing.html?category=old-school">Watch Now</a>
       </div>
@@ -41,7 +48,10 @@
     <h2>Up & Coming</h2>
     <div class="video-gallery">
       <div class="video-item">
-        <img src="comedians/comic2.jpg" alt="Comic 2" class="thumbnail">
+        <div class="thumbnail-wrapper">
+          <img src="comedians/comic2.jpg" alt="Comic 2" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
+        </div>
         <p>Comic 2 - Rising Star</p>
         <a href="landing.html?category=up-and-coming">Watch Now</a>
       </div>
@@ -53,7 +63,10 @@
     <h2>Weekly Top Picks</h2>
     <div class="video-gallery">
       <div class="video-item">
-        <img src="comedians/comic3.jpg" alt="Comic 3" class="thumbnail">
+        <div class="thumbnail-wrapper">
+          <img src="comedians/comic3.jpg" alt="Comic 3" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
+        </div>
         <p>Comic 3 - Top of the Week</p>
         <a href="landing.html?category=weekly-top-picks">Watch Now</a>
       </div>
@@ -65,7 +78,10 @@
     <h2>New Releases</h2>
     <div class="video-gallery">
       <div class="video-item">
-        <img src="comedians/comic4.jpg" alt="Comic 4" class="thumbnail">
+        <div class="thumbnail-wrapper">
+          <img src="comedians/comic4.jpg" alt="Comic 4" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
+        </div>
         <p>Comic 4 - Latest Special</p>
         <a href="landing.html?category=new-releases">Watch Now</a>
       </div>
@@ -76,6 +92,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
