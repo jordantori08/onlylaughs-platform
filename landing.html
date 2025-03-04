@@ -3,38 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Category - Only Laughs</title>
+  <title>Top of the Week - Only Laughs</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Side Navigation Bar (Fixed on the left side) -->
-  <div class="sidenav" id="mySidenav">
-    <h2>Only Laughs</h2>
-    <a href="#old-school">Old School</a>
-    <a href="#up-and-coming">Up & Coming</a>
-    <a href="#weekly-top-picks">Weekly Top Picks</a>
-    <a href="#new-releases">New Releases</a>
-    <a href="#search">Search</a>
+  <!-- Top Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">
+      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="navbar-logo">
+    </a>
+    <a href="#">Top Laughs</a>
+    <a href="#">Top of the Week</a>
+    <a href="#">Up & Coming</a>
+    <a href="#">My List</a>
   </div>
 
-  <!-- Main Content Area for Secondary Page -->
-  <header>
-    <h1 id="category-header">Category</h1> <!-- Dynamic header based on category -->
+  <!-- Main Header with Background Image -->
+  <header class="main-header">
+    <div class="header-content">
+      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="header-logo">
+      <h1>Top of the Week</h1>
+    </div>
   </header>
 
-  <div class="content" id="mainContent">
-    <div id="video-grid">
-      <!-- 5x5 Grid of Thumbnails -->
-      <div class="video-gallery">
-        <div class="video-item">
-          <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
-          <p>Comic 1 - Legendary Stand-Up</p>
+  <!-- Video Gallery for Top of the Week -->
+  <div class="category-section">
+    <h2>Top of the Week</h2>
+    <div class="video-gallery">
+      <!-- First Video Thumbnail -->
+      <div class="video-item">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/zUH10Zv7bkw/0.jpg" alt="Comic 1" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
         </div>
-        <div class="video-item">
-          <img src="comedians/comic2.jpg" alt="Comic 2" class="thumbnail">
-          <p>Comic 2 - Old School Master</p>
+        <p>Comic 1 - Rising Star</p>
+        <a href="https://www.youtube.com/watch?v=zUH10Zv7bkw">Watch Now</a>
+      </div>
+
+      <!-- Second Video Thumbnail -->
+      <div class="video-item">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/gc3LBrseNhs/0.jpg" alt="Comic 2" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
         </div>
-        <!-- Repeat similar items to make a 5x5 grid -->
+        <p>Comic 2 - Latest Special</p>
+        <a href="https://www.youtube.com/watch?v=gc3LBrseNhs">Watch Now</a>
+      </div>
+
+      <!-- Third Video Thumbnail -->
+      <div class="video-item">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/zKUpf1Vx0vs/0.jpg" alt="Comic 3" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
+        </div>
+        <p>Comic 3 - Top of the Week</p>
+        <a href="https://www.youtube.com/watch?v=zKUpf1Vx0vs">Watch Now</a>
+      </div>
+
+      <!-- Fourth Video Thumbnail -->
+      <div class="video-item">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/o7zmTSSZwb0/0.jpg" alt="Comic 4" class="thumbnail">
+          <div class="play-icon">&#9654;</div>
+        </div>
+        <p>Comic 4 - Best Show</p>
+        <a href="https://www.youtube.com/watch?v=o7zmTSSZwb0&t=436s">Watch Now</a>
       </div>
     </div>
   </div>
