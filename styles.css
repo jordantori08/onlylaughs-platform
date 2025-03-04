@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #121212; /* Dark background for contrast */
   color: white;
+  transition: padding-top 0.3s ease-in-out; /* Smooth transition for body */
 }
 
 /* Navbar (Fixed Top) */
@@ -19,6 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 999; /* Keep the navbar on top */
+  transition: top 0.3s ease; /* Smooth transition for navbar */
 }
 
 /* Logo in Navbar */
