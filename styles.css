@@ -31,7 +31,7 @@ header {
   position: relative; /* Ensures that the logo is above the side nav */
 }
 
-/* Side Navigation Bar (Always Visible) */
+/* Side Navigation Bar (Initially Visible) */
 .sidenav {
   height: 100%;
   width: 250px;
@@ -41,7 +41,12 @@ header {
   background-color: #1f1f1f;
   padding-top: 20px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out; /* Smooth sliding effect */
   z-index: 9999; /* Keeps the nav bar above everything else */
+}
+
+.sidenav.hidden {
+  left: -250px; /* Hides the sidebar */
 }
 
 .sidenav h2 {
@@ -64,12 +69,30 @@ header {
   color: #1f1f1f;
 }
 
+/* Toggle Button to Hide Sidebar */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: -50px; /* Positioned outside the sidebar */
+  font-size: 30px;
+  color: #ffca28;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000; /* Makes sure the button stays on top */
+}
+
 /* Main Content */
 .content {
-  margin-left: 250px; /* Make room for the always-visible sidebar */
+  margin-left: 250px; /* Make room for the sidebar */
   padding: 20px;
   color: white;
   width: 100%;
+  transition: margin-left 0.3s ease; /* Smooth content shift */
+}
+
+.content.shift {
+  margin-left: 0; /* Shift content when sidebar is hidden */
 }
 
 .video-gallery {
@@ -120,6 +143,7 @@ header {
     page-break-before: always;
   }
 }
+
 
 
 
