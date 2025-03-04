@@ -37,16 +37,16 @@ header {
   width: 250px;
   position: fixed;
   top: 0;
-  left: 0; /* Always visible */
+  left: 0; /* Initially visible */
   background-color: #1f1f1f;
   padding-top: 20px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease-in-out; /* Smooth sliding effect */
   z-index: 9999; /* Keeps the nav bar above everything else */
+  transition: 0.3s ease-in-out; /* Smooth slide effect */
 }
 
 .sidenav.hidden {
-  left: -250px; /* Hides the sidebar */
+  left: -250px; /* Hide the sidebar offscreen */
 }
 
 .sidenav h2 {
@@ -143,6 +143,7 @@ header {
     page-break-before: always;
   }
 }
+
 
 
 
