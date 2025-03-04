@@ -28,24 +28,25 @@ header {
   color: #fff;
   text-align: center;
   padding: 20px;
+  position: relative; /* Ensures that the logo is above the side nav */
 }
 
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  font-weight: bold;
-}
-
-/* Side Navigation Bar */
+/* Side Navigation Bar (Initially Hidden) */
 .sidenav {
   height: 100%;
   width: 250px;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -250px; /* Initially off-screen */
   background-color: #1f1f1f;
   padding-top: 20px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out; /* Smooth animation */
+  z-index: 9999; /* Keeps the nav bar above other content */
+}
+
+.sidenav.open {
+  left: 0; /* Slides the side nav into view */
 }
 
 .sidenav h2 {
@@ -68,12 +69,28 @@ header h1 {
   color: #1f1f1f;
 }
 
+/* Hamburger Menu Button */
+.open-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: #ffca28;
+  cursor: pointer;
+  z-index: 10000; /* Makes sure the button stays on top */
+}
+
 /* Main Content */
 .content {
-  margin-left: 250px;
+  margin-left: 0;
   padding: 20px;
   color: white;
   width: 100%;
+  transition: margin-left 0.3s ease; /* Smooth content shift */
+}
+
+.content.shift {
+  margin-left: 250px; /* Shift content to the right when nav is open */
 }
 
 .video-gallery {
@@ -124,4 +141,5 @@ header h1 {
     page-break-before: always;
   }
 }
+
 
