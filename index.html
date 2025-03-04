@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Only Laughs - Video Streaming Platform</title>
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Laughs - Stand-Up Comedy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="#" class="logo">Only Laughs</a>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#comics">Comics</a>
-            <a href="#videos">Videos</a>
-            <a href="#about">About</a>
+  <!-- Side Navigation Bar (Fixed on the left side) -->
+  <div class="sidenav" id="mySidenav">
+    <h2>Only Laughs</h2>
+    <a href="#old-school">Old School</a>
+    <a href="#up-and-coming">Up & Coming</a>
+    <a href="#weekly-top-picks">Weekly Top Picks</a>
+    <a href="#new-releases">New Releases</a>
+    <a href="#search">Search</a>
+  </div>
+
+  <!-- Main Content Area -->
+  <header>
+    <h1>Welcome to Only Laughs</h1>
+  </header>
+
+  <div class="content" id="mainContent">
+    <div id="old-school">
+      <h2>Old School Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
+          <p>Comic 1 - Legendary Stand-Up</p>
+          <a href="landing.html?category=old-school">Watch Now</a>
         </div>
-    </nav>
+        <!-- More video items here -->
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Only Laughs!</h1>
-        <p>Enjoy endless hours of funny videos, skits, and comic moments.</p>
-    </section>
-
-    <!-- Comics and Videos Section -->
-    <section id="comics" class="category-section">
-        <h2>Comics</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="assets/comic1_thumbnail.jpg" alt="Comic 1 Thumbnail" class="category-thumbnail">
-                <h3>Funny Skits</h3>
-                <a href="comic1_video.html" class="btn">Watch Now</a>
-            </div>
-            <div class="category-card">
-                <img src="assets/comic2_thumbnail.jpg" alt="Comic 2 Thumbnail" class="category-thumbnail">
-                <h3>Stand-up Comedy</h3>
-                <a href="comic2_video.html" class="btn">Watch Now</a>
-            </div>
-            <div class="category-card">
-                <img src="assets/comic3_thumbnail.jpg" alt="Comic 3 Thumbnail" class="category-thumbnail">
-                <h3>Sketch Comedy</h3>
-                <a href="comic3_video.html" class="btn">Watch Now</a>
-            </div>
+    <div id="up-and-coming">
+      <h2>Up & Coming Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic3.jpg" alt="Comic 3" class="thumbnail">
+          <p>Comic 3 - Rising Star</p>
+          <a href="landing.html?category=up-and-coming">Watch Now</a>
         </div>
-    </section>
+        <!-- More video items here -->
+      </div>
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Only Laughs. All rights reserved.</p>
-    </footer>
+    <div id="weekly-top-picks">
+      <h2>Weekly Top Picks</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic5.jpg" alt="Comic 5" class="thumbnail">
+          <p>Comic 5 - Top of the Week</p>
+          <a href="landing.html?category=weekly-top-picks">Watch Now</a>
+        </div>
+        <!-- More video items here -->
+      </div>
+    </div>
 
-    <script src="scripts.js"></script>
+    <div id="new-releases">
+      <h2>New Releases</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic7.jpg" alt="Comic 7" class="thumbnail">
+          <p>Comic 7 - Latest Special</p>
+          <a href="landing.html?category=new-releases">Watch Now</a>
+        </div>
+        <!-- More video items here -->
+      </div>
+    </div>
+
+    <div id="search">
+      <h2>Search for Comedians</h2>
+      <input type="text" id="search-input" placeholder="Search comedian...">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
 
 
