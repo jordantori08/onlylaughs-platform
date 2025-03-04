@@ -9,3 +9,4 @@ function toggleSidebar() {
   // Adjust content margin when the sidebar is hidden
   content.classList.toggle("shift");
 }
+
