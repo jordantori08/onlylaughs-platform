@@ -1,105 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Only Laughs - Stand-Up Comedy</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Top Navigation Bar -->
-  <div class="navbar">
-    <a href="index.html">
-      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="navbar-logo">
-    </a>
-    <a href="#">Top Laughs</a>
-    <a href="#">Top of the Week</a>
-    <a href="#">Up & Coming</a>
-    <a href="#">My List</a>
-  </div>
+/* Global Body and Layout */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for contrast */
+  color: white;
+  transition: padding-top 0.3s ease-in-out; /* Smooth transition for body */
+}
 
-  <!-- Main Header with Background Image -->
-  <header class="main-header">
-    <div class="header-content">
-      <img src="https://i.postimg.cc/4K2BpnMn/logo.png" alt="Only Laughs Logo" class="header-logo">
-      <h1>Only Laughs</h1>
-    </div>
-  </header>
+/* Navbar (Fixed Top) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999; /* Keep the navbar on top */
+  transition: top 0.3s ease; /* Smooth transition for navbar */
+}
 
-  <!-- Video Galleries (Categories) -->
-  <div class="category-section">
-    <h2>Dan Soder</h2>
-    <div class="video-gallery">
-      <!-- First Video Thumbnail -->
-      <div class="video-item">
-        <div class="thumbnail-wrapper">
-          <img src="https://img.youtube.com/vi/1Lik3hSyhrY/0.jpg" alt="Comic 1" class="thumbnail">
-          <div class="play-icon">&#9654;</div>
-        </div>
-        <p>Comic 1 - Legendary Stand-Up</p>
-        <a href="https://www.youtube.com/watch?v=1Lik3hSyhrY&t=4s">Watch Now</a>
-      </div>
+/* Logo in Navbar */
+.navbar-logo {
+  width: 120px;
+  cursor: pointer;
+}
 
-      <!-- Second Video Thumbnail -->
-      <div class="video-item">
-        <div class="thumbnail-wrapper">
-          <img src="https://img.youtube.com/vi/zUH10Zv7bkw/0.jpg" alt="Comic 2" class="thumbnail">
-          <div class="play-icon">&#9654;</div>
-        </div>
-        <p>Comic 2 - Rising Star</p>
-        <a href="https://www.youtube.com/watch?v=zUH10Zv7bkw">Watch Now</a>
-      </div>
+/* Navbar Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 0 15px;
+  font-weight: bold; /* Bold text for links */
+  transition: color 0.3s ease-in-out;
+}
 
-      <!-- Additional Video Thumbnails can be added here -->
+/* Navbar Links Hover Effect */
+.navbar a:hover {
+  color: #ffca28; /* Golden yellow on hover */
+}
 
-    </div>
-  </div>
+/* Full Screen Header with Background Image */
+.main-header {
+  width: 100%;
+  height: 80vh;
+  background-image: url('your-background-image.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-  <div class="category-section">
-    <h2>Matt McCusker</h2>
-    <div class="video-gallery">
-      <div class="video-item">
-        <div class="thumbnail-wrapper">
-          <img src="https://img.youtube.com/vi/o7zmTSSZwb0/0.jpg" alt="Comic 3" class="thumbnail">
-          <div class="play-icon">&#9654;</div>
-        </div>
-        <p>Comic 3 - Top of the Week</p>
-        <a href="https://www.youtube.com/watch?v=o7zmTSSZwb0&t=436s">Watch Now</a>
-      </div>
-    </div>
-  </div>
+.header-content {
+  text-align: center;
+  color: white;
+}
 
-  <div class="category-section">
-    <h2>Shane Gillis</h2>
-    <div class="video-gallery">
-      <div class="video-item">
-        <div class="thumbnail-wrapper">
-          <img src="https://img.youtube.com/vi/zKUpf1Vx0vs/0.jpg" alt="Comic 4" class="thumbnail">
-          <div class="play-icon">&#9654;</div>
-        </div>
-        <p>Comic 4 - Top of the Week</p>
-        <a href="https://www.youtube.com/watch?v=zKUpf1Vx0vs">Watch Now</a>
-      </div>
-    </div>
-  </div>
+.header-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
 
-  <div class="category-section">
-    <h2>Tom Segura</h2>
-    <div class="video-gallery">
-      <div class="video-item">
-        <div class="thumbnail-wrapper">
-          <img src="https://img.youtube.com/vi/gc3LBrseNhs/0.jpg" alt="Comic 5" class="thumbnail">
-          <div class="play-icon">&#9654;</div>
-        </div>
-        <p>Comic 5 - Latest Special</p>
-        <a href="https://www.youtube.com/watch?v=gc3LBrseNhs">Watch Now</a>
-      </div>
-    </div>
-  </div>
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* Video Gallery and Thumbnails */
+.category-section {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.category-section h2 {
+  color: #ffca28;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Video Gallery Grid */
+.video-gallery {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 15px;
+  padding-bottom: 20px; /* Add padding to the bottom for better scrolling */
+}
+
+.video-item {
+  width: 180px; /* Reduced width for thumbnails */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Play Icon Styling (Visible on hover) */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  display: none; /* Hidden by default */
+  z-index: 10;
+}
+
+/* Show Play Icon when Hovering */
+.video-item:hover .play-icon {
+  display: block;
+  cursor: pointer;
+}
+
+/* Video Item Hover Effect */
+.video-item:hover .thumbnail {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.video-item:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Box shadow on hover */
+}
+
+.video-item p {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.video-item a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffca28;
+  color: black;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.video-item a:hover {
+  background-color: #ff5722; /* Red color on hover */
+}
+
+/* 5x5 Grid for Landing Page */
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+#category-header {
+  color: #ffca28;
+  font-size: 2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    gap: 15px;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .header-logo {
+    max-width: 150px; /* Resize logo on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row on very small screens */
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack the navbar links vertically */
+    padding: 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
 
 
 
