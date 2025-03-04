@@ -18,4 +18,3 @@ if (category) {
   const categoryHeader = document.getElementById('category-header');
   categoryHeader.textContent = category.replace(/-/g, ' ').toUpperCase(); // Format the category text
 }
-
