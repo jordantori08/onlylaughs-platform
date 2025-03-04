@@ -31,22 +31,17 @@ header {
   position: relative; /* Ensures that the logo is above the side nav */
 }
 
-/* Side Navigation Bar (Initially Hidden) */
+/* Side Navigation Bar (Always Visible) */
 .sidenav {
   height: 100%;
   width: 250px;
   position: fixed;
   top: 0;
-  left: -250px; /* Initially off-screen */
+  left: 0; /* Always visible */
   background-color: #1f1f1f;
   padding-top: 20px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease-in-out; /* Smooth animation */
-  z-index: 9999; /* Keeps the nav bar above other content */
-}
-
-.sidenav.open {
-  left: 0; /* Slides the side nav into view */
+  z-index: 9999; /* Keeps the nav bar above everything else */
 }
 
 .sidenav h2 {
@@ -69,28 +64,12 @@ header {
   color: #1f1f1f;
 }
 
-/* Hamburger Menu Button */
-.open-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 30px;
-  color: #ffca28;
-  cursor: pointer;
-  z-index: 10000; /* Makes sure the button stays on top */
-}
-
 /* Main Content */
 .content {
-  margin-left: 0;
+  margin-left: 250px; /* Make room for the always-visible sidebar */
   padding: 20px;
   color: white;
   width: 100%;
-  transition: margin-left 0.3s ease; /* Smooth content shift */
-}
-
-.content.shift {
-  margin-left: 250px; /* Shift content to the right when nav is open */
 }
 
 .video-gallery {
@@ -141,6 +120,7 @@ header {
     page-break-before: always;
   }
 }
+
 
 
 
