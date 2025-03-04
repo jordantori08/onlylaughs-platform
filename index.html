@@ -1,111 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Only Laughs Platform</title>
-    
-    <!-- Include Bootstrap for Better Design -->
-    <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@5.0.0/dist/css/mdb.min.css" rel="stylesheet" />
-    
-    <!-- Link to custom styles -->
-    <link href="styles.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Laughs - Stand-Up Comedy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Only Laughs</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#subscribe">Subscribe</a>
-                </li>
-            </ul>
+  <!-- Side Navigation Bar (Initially Visible) -->
+  <div class="sidenav" id="mySidenav">
+    <button class="toggle-btn" onclick="toggleSidebar()">&#8594; Hide</button>
+    <h2>Only Laughs</h2>
+    <a href="#old-school">Old School</a>
+    <a href="#up-and-coming">Up & Coming</a>
+    <a href="#weekly-top-picks">Weekly Top Picks</a>
+    <a href="#new-releases">New Releases</a>
+    <a href="#search">Search</a>
+  </div>
+
+  <!-- Main Content -->
+  <header>
+    <h1>Welcome to Only Laughs</h1>
+  </header>
+
+  <div class="content" id="mainContent">
+    <div id="old-school">
+      <h2>Old School Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
+          <p>Comic 1 - Legendary Stand-Up</p>
         </div>
-    </nav>
+        <!-- Add more video items -->
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero bg-primary text-white text-center py-5">
-        <h1 class="display-4">Welcome to Only Laughs</h1>
-        <p class="lead">Your ultimate destination for the funniest videos!</p>
-        <a href="#content" class="btn btn-light btn-lg">Explore Now</a>
-    </section>
-
-    <!-- Main Content Section -->
-    <section id="content" class="container my-5">
-        <h2 class="text-center">Featured Videos</h2>
-        <div class="row">
-            <!-- Video Card 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="assets/images/video1.jpg" class="card-img-top" alt="Funny Video 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedy Skits</h5>
-                        <p class="card-text">Watch hilarious comedy skits to brighten your day!</p>
-                        <a href="#" class="btn btn-primary">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Card 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="assets/images/video2.jpg" class="card-img-top" alt="Funny Video 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Stand-Up Comedy</h5>
-                        <p class="card-text">Enjoy stand-up comedy shows by top comedians.</p>
-                        <a href="#" class="btn btn-primary">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Card 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img src="assets/images/video3.jpg" class="card-img-top" alt="Funny Video 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Pranks</h5>
-                        <p class="card-text">Get ready for a good laugh with these hilarious pranks!</p>
-                        <a href="#" class="btn btn-primary">Watch Now</a>
-                    </div>
-                </div>
-            </div>
+    <div id="up-and-coming">
+      <h2>Up & Coming Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic2.jpg" alt="Comic 2" class="thumbnail">
+          <p>Comic 2 - Rising Star</p>
         </div>
-    </section>
+        <!-- Add more video items -->
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="bg-light py-5">
-        <div class="container text-center">
-            <h2>About Only Laughs</h2>
-            <p>Only Laughs is a place where you can enjoy the funniest content available on the internet. We strive to keep
-                our content fresh and hilarious for all viewers.</p>
+    <div id="weekly-top-picks">
+      <h2>Weekly Top Picks</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic3.jpg" alt="Comic 3" class="thumbnail">
+          <p>Comic 3 - Top of the Week</p>
         </div>
-    </section>
+        <!-- Add more video items -->
+      </div>
+    </div>
 
-    <!-- Subscribe Section -->
-    <section id="subscribe" class="text-center py-5">
-        <div class="container">
-            <h2>Subscribe for Premium Content</h2>
-            <p>Unlock exclusive access to premium videos and support your favorite creators.</p>
-            <a href="#" class="btn btn-danger btn-lg">Subscribe Now</a>
+    <div id="new-releases">
+      <h2>New Releases</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic4.jpg" alt="Comic 4" class="thumbnail">
+          <p>Comic 4 - Latest Special</p>
         </div>
-    </section>
+        <!-- Add more video items -->
+      </div>
+    </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@5.0.0/dist/js/mdb.min.js"></script>
+    <div id="search">
+      <h2>Search for Comedians</h2>
+      <input type="text" id="search-input" placeholder="Search comedian...">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
 
 
