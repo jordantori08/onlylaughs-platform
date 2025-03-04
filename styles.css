@@ -43,7 +43,7 @@ header {
   background-color: #1f1f1f;
   padding-top: 20px;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999; /* Keeps the nav bar above everything else */
+  z-index: 9999; /* Keeps the nav bar above other content */
 }
 
 .sidenav h2 {
@@ -71,6 +71,7 @@ header {
   margin-left: 250px; /* Make room for the always-visible sidebar */
   padding: 20px;
   width: 100%;
+  transition: margin-left 0.3s ease; /* Smooth content shift */
 }
 
 /* Video Gallery */
@@ -105,18 +106,25 @@ header {
   text-align: center;
 }
 
-/* 5x5 Grid for Landing Page */
-#video-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+/* Search Section */
+#search {
+  margin-top: 40px;
+  text-align: center;
 }
 
-#category-header {
-  color: #ffca28;
-  font-size: 2rem;
-  margin-top: 20px;
-  text-align: center;
+#search input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Page Breaks for Print */
+@media print {
+  .video-gallery {
+    page-break-before: always;
+  }
 }
 
 
