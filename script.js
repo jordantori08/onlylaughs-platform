@@ -10,4 +10,3 @@ function toggleSidebar() {
   content.classList.toggle("shift");
 }
 
-
