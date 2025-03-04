@@ -1,4 +1,4 @@
-// Toggle side navigation (genie effect)
+// Toggle side navigation (hamburger menu effect)
 function toggleNav() {
   const sideNav = document.getElementById("mySidenav");
   const content = document.getElementById("mainContent");
@@ -12,4 +12,3 @@ function toggleNav() {
     content.classList.add("shift");
   }
 }
-
