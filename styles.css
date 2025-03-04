@@ -3,110 +3,131 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
   background-color: #121212; /* Dark background for contrast */
   color: white;
 }
 
-h1, h2 {
-  color: #ffca28; /* Yellowish Gold for titles */
-  text-align: center;
-}
-
-h2 {
-  margin-top: 40px;
-}
-
-/* Header Styling with Background Image */
-header {
-  width: 100%;
-  height: 300px;  /* Adjust the height as needed */
-  background-image: url('/mnt/data/onlylaughs-logo.webp'); /* Add your background image */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: relative; /* Ensures that the logo is above the side nav */
-}
-
-/* Side Navigation Bar (Fixed on the left side) */
-.sidenav {
-  height: 100%;
-  width: 250px;
+/* Navbar (Fixed Top) */
+.navbar {
   position: fixed;
   top: 0;
-  left: 0; /* Always visible on the left side */
-  background-color: #1f1f1f;
-  padding-top: 20px;
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999; /* Keeps the nav bar above other content */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
 }
 
-.sidenav h2 {
+.navbar-logo {
+  width: 120px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 0 15px;
+}
+
+.navbar a:hover {
+  color: #ffca28; /* Golden yellow on hover */
+}
+
+/* Full Screen Header with Background Image */
+.main-header {
+  width: 100%;
+  height: 80vh;
+  background-image: url('your-background-image.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-content {
   text-align: center;
-  color: #ffca28;
+  color: white;
+}
+
+.header-logo {
+  max-width: 200px;
   margin-bottom: 20px;
 }
 
-.sidenav a {
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  display: block;
-  transition: background-color 0.3s ease;
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.sidenav a:hover {
-  background-color: #ffca28;
-  color: #1f1f1f;
-}
-
-/* Main Content */
-.content {
-  margin-left: 250px; /* Make room for the always-visible sidebar */
+/* Video Gallery and Thumbnails */
+.category-section {
+  margin-top: 80px;
   padding: 20px;
-  width: 100%;
 }
 
-/* Video Gallery */
+.category-section h2 {
+  color: #ffca28;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Video Gallery Grid */
 .video-gallery {
   display: flex;
-  overflow-x: auto; /* Horizontal scroll for mobile */
+  overflow-x: auto;
   gap: 20px;
 }
 
 .video-item {
-  background-color: #333;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 200px;
-  transition: transform 0.3s ease;
+  width: 220px;
   cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
 .video-item img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .video-item p {
   padding: 10px;
   font-size: 14px;
   text-align: center;
-  color: white;
 }
 
-.video-item:hover {
-  transform: scale(1.05); /* Subtle zoom effect on hover */
+.video-item a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffca28;
+  color: black;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.video-item:active {
-  transform: scale(1); /* Prevent zoom on click */
+.video-item a:hover {
+  background-color: #ff5722; /* Red color on hover */
 }
 
 /* 5x5 Grid for Landing Page */
@@ -122,6 +143,29 @@ header {
   margin-top: 20px;
   text-align: center;
 }
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
 
 
 
