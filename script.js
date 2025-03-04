@@ -1,5 +1,9 @@
-let lastScrollTop = 0; // Keep track of last scroll position
-const navbar = document.querySelector('.navbar'); // The navbar element
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Only Laughs platform loaded");
 
-// Listen to the scroll event
-window
+    document.querySelectorAll('.watch-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            alert("Redirecting to live show...");
+        });
+    });
+});
