@@ -90,13 +90,14 @@ h1 {
 
 /* Video Gallery Grid */
 .video-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two videos per row */
-  gap: 20px;
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 15px;
+  padding-bottom: 20px; /* Add padding to the bottom for better scrolling */
 }
 
 .video-item {
-  width: 100%;
+  width: 140px; /* Reduced width for smaller Netflix-style thumbnails */
   cursor: pointer;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
